@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <console name="console" target="SYSTEM_OUT">
+            <!-- JSON format -->
+            <PatternLayout pattern='{"timestamp":"%d{dd-MMM-yyyy HH:mm:ss,SSS}","level":"%-5level","thread":"[%t]","logger":"%logger{36}","message":"%msg%rThrowable{separator( | )}"}%n'/>
+
+            <!-- Common format
+            <PatternLayout pattern="%d{dd-MMM-yyyy HH:mm:ss,SSS} %-5level [%t]  %logger{36} - %msg%n%rThrowable{separator( | )}"/>
+            -->
+        </console>
+    </appenders>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="console"/>
+        </Root>
+        <logger name="com.gbuchely.logcreator" level="INFO">
+            <AppenderRef red="console"/>
+        </logger>
+    </Loggers>
+</configuration>
