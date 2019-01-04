@@ -1,6 +1,7 @@
 buildscript {
 	ext {
 		springBootVersion = '2.1.1.RELEASE'
+		log4jVersion = '2.11.0'
 	}
 	repositories {
 		mavenCentral()
@@ -25,6 +26,11 @@ repositories {
 
 
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-web') {
+		// Avoid that spring use the default Log4J configuration when start
+		exclude module: 'log4j-to-slf4j', group: 'org.apache.logging.log4j'
+	}
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	compile("org.apache.logging.log4j:log4j-api:${log4jVersion}")
+	compile("org.apache.logging.log4j:log4j-core:${log4jVersion}")
 }
