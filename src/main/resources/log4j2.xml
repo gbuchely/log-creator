@@ -21,8 +21,5 @@
         <Root level="error">
             <AppenderRef ref="console"/>
         </Root>
-        <logger name="com.gbuchely.logcreator" level="INFO">
-            <AppenderRef red="console"/>
-        </logger>
     </Loggers>
 </configuration>
