@@ -2,12 +2,11 @@
 <configuration status="WARN">
     <appenders>
         <console name="console" target="SYSTEM_OUT">
-            <!-- JSON format -->
+            <!-- JSON formatS
             <PatternLayout pattern='{"timestamp":"%d{dd-MMM-yyyy HH:mm:ss,SSS}","level":"%-5level","thread":"[%t]","logger":"%logger{36}","message":"%msg%rThrowable{separator( | )}"}%n'/>
-
-            <!-- Common format
-            <PatternLayout pattern="%d{dd-MMM-yyyy HH:mm:ss,SSS} %-5level [%t]  %logger{36} - %msg%n%rThrowable{separator( | )}"/>
             -->
+            <!-- Common format -->
+            <PatternLayout pattern="%d{dd-MMM-yyyy HH:mm:ss,SSS} %-5level [%t]  %logger{36} - %msg%n%rThrowable{separator( | )}"/>
         </console>
     </appenders>
     <Loggers>
