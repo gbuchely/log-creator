@@ -40,7 +40,7 @@ public class LogCreatorController {
         for (MessageSet set: bashRequest) {
             for (int i = 0; i < set.getIterations(); i++) {
                 for (String message : set.getMessages()) {
-                    LOGGER.info("[CREW-METRIC] - " + message);
+                    LOGGER.info("LGCT123456 - [CREW-METRIC] - " + message);
                     Thread.sleep(set.getDelay());
                 }
             }
